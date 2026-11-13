@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let matchedBtn = null;
       filterBtns.forEach(b => {
         const c = (b.getAttribute('data-category') || b.getAttribute('data-gender') || '').toLowerCase();
-        if (c && (c === targetKey || (targetKey === 'classic' && c === 'candles') || (targetKey === 'rustic' && c === 'edible') || (targetKey === 'luxe' && c === 'hampers'))) {
+        if (c && (c === targetKey || (targetKey === 'deities' && c === 'krishna') || (targetKey === 'sacred' && c === 'lakshmi') || (targetKey === 'goldleaf' && c === 'custom'))) {
           matchedBtn = b;
         }
       });
@@ -193,43 +193,44 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastFocused = null;
 
   const measureNote = `<p style="font-size:var(--text-small); color:var(--color-text-muted); margin-top:var(--space-3)">
-      All favor dimensions are crafted in our studio. Digital proof review and custom ribbon swatch samples are complimentary on every order.
+      All Tanjore paintings are handcrafted on seasoned jackfruit or marine-ply boards with pure 24K gold leaf, natural mineral pigments, and uncut Jaipur stones.
     </p>`;
 
   const sizeTables = {
-    candles: `
+    sizes: `
       <span class="eyebrow">Studio Specifications</span>
-      <h3 id="modal-title">Candle Favors — Size &amp; Burn Guide</h3>
+      <h3 id="modal-title">Tanjore Painting — Dimensions &amp; Frame Guide</h3>
       <table>
-        <thead><tr><th>Favor Size</th><th>Height</th><th>Diameter</th><th>Est. Burn Time</th></tr></thead>
+        <thead><tr><th>Format</th><th>Inner Artwork</th><th>With Teak Frame</th><th>Recommended Space</th></tr></thead>
         <tbody>
-          <tr><td>Petite (2 oz)</td><td>2.0 in</td><td>1.8 in</td><td>~15 Hours</td></tr>
-          <tr><td>Standard (4 oz)</td><td>2.6 in</td><td>2.2 in</td><td>~30 Hours</td></tr>
-          <tr><td>Grand (8 oz)</td><td>3.5 in</td><td>3.0 in</td><td>~60 Hours</td></tr>
+          <tr><td>Pooja Miniature</td><td>12 &times; 15 in</td><td>16 &times; 19 in</td><td>Home Altar / Study</td></tr>
+          <tr><td>Classic Heritage</td><td>18 &times; 24 in</td><td>24 &times; 30 in</td><td>Living Room / Foyer</td></tr>
+          <tr><td>Grand Temple</td><td>24 &times; 36 in</td><td>30 &times; 42 in</td><td>Main Sanctuary / Hall</td></tr>
+          <tr><td>Royal Darbar</td><td>36 &times; 48 in</td><td>44 &times; 56 in</td><td>Courtyard / Estate</td></tr>
         </tbody>
       </table>${measureNote}
     `,
-    packaging: `
-      <span class="eyebrow">Bespoke Finishes</span>
-      <h3 id="modal-title">Packaging &amp; Wax Seal Guide</h3>
+    frames: `
+      <span class="eyebrow">Traditional Joinery</span>
+      <h3 id="modal-title">Chettinad &amp; Mani Frame Options</h3>
       <table>
-        <thead><tr><th>Option</th><th>Material</th><th>Monogram Area</th></tr></thead>
+        <thead><tr><th>Frame Style</th><th>Timber</th><th>Finish</th></tr></thead>
         <tbody>
-          <tr><td>Wax Seal Stamp</td><td>Metallic Rose Gold Wax</td><td>1.0 in Circular</td></tr>
-          <tr><td>Foil Embossed Tag</td><td>300gsm Cotton Cardstock</td><td>2.0 in x 3.5 in</td></tr>
-          <tr><td>Custom Ribbon</td><td>Double-Face Satin / Velvet</td><td>0.75 in Width</td></tr>
+          <tr><td>Classic Mani Frame</td><td>Seasoned Burma Teak</td><td>Hand-Rubbed Satin Rosewood</td></tr>
+          <tr><td>Carved Chettinad Arch</td><td>Aged Teakwood</td><td>Deep Antique Walnut</td></tr>
+          <tr><td>Temple Gold Bevel</td><td>Teak &amp; Brass Inlay</td><td>Antique Gold Patina</td></tr>
         </tbody>
       </table>${measureNote}
     `,
-    quantities: `
-      <span class="eyebrow">Event Concierge</span>
-      <h3 id="modal-title">Favor Quantity Guide</h3>
+    craft: `
+      <span class="eyebrow">Authentic Materials</span>
+      <h3 id="modal-title">Gold Leaf &amp; Gemstone Detailing</h3>
       <table>
-        <thead><tr><th>Guest Count</th><th>Recommended Favors</th><th>Lead Time</th></tr></thead>
+        <thead><tr><th>Element</th><th>Traditional Material</th><th>Craft Duration</th></tr></thead>
         <tbody>
-          <tr><td>50 Guests</td><td>55 Favors (+10% buffer)</td><td>3–5 Days</td></tr>
-          <tr><td>100 Guests</td><td>110 Favors (+10% buffer)</td><td>5–7 Days</td></tr>
-          <tr><td>250 Guests</td><td>275 Favors (+10% buffer)</td><td>7–10 Days</td></tr>
+          <tr><td>Gold Gilding</td><td>24K Pure Thanjavur Gold Foil</td><td>7–10 Days</td></tr>
+          <tr><td>Embossing (Sukkan)</td><td>Chalk Powder &amp; Gum Arabic</td><td>5–7 Days</td></tr>
+          <tr><td>Gemstone Setting</td><td>Uncut Jaipur Kundan &amp; Pearls</td><td>3–5 Days</td></tr>
         </tbody>
       </table>${measureNote}
     `
@@ -239,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalOverlay || !modalBody) return;
 
     lastFocused = document.activeElement;
-    modalBody.innerHTML = sizeTables[type] || sizeTables.candles;
+    modalBody.innerHTML = sizeTables[type] || sizeTables.sizes;
     modalOverlay.classList.add('open');
     if (modalClose) modalClose.focus();
     document.body.style.overflow = 'hidden';
