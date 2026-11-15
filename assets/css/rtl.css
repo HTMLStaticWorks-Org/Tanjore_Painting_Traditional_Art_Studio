@@ -160,6 +160,59 @@
   text-align: right;
 }
 
+[dir="rtl"] .quote-author:not(:has(.quote-avatar)) span {
+  text-align: center;
+}
+
+[dir="rtl"] .section-header.centered,
+[dir="rtl"] .section-header.centered h2,
+[dir="rtl"] .section-header.centered .eyebrow,
+[dir="rtl"] .section-header.centered .subtext,
+[dir="rtl"] .split-body.centered,
+[dir="rtl"] .split-body.centered h2,
+[dir="rtl"] .split-body.centered .eyebrow,
+[dir="rtl"] .split-body.centered .subtext,
+[dir="rtl"] .newsletter-inner.centered,
+[dir="rtl"] .newsletter-inner.centered h2,
+[dir="rtl"] .newsletter-inner.centered .eyebrow,
+[dir="rtl"] .newsletter-inner.centered .subtext,
+[dir="rtl"] .page-header,
+[dir="rtl"] .page-header h1,
+[dir="rtl"] .page-header h2,
+[dir="rtl"] .page-header .eyebrow,
+[dir="rtl"] .page-header .subtext,
+[dir="rtl"] .hero-content.centered,
+[dir="rtl"] .hero-content.centered h1,
+[dir="rtl"] .hero-content.centered .eyebrow,
+[dir="rtl"] .hero-content.centered .subtext,
+[dir="rtl"] .rail-head.centered,
+[dir="rtl"] .rail-head.centered h2,
+[dir="rtl"] .rail-head.centered .eyebrow,
+[dir="rtl"] .rail-head.centered .subtext,
+[dir="rtl"] .promo-body.centered,
+[dir="rtl"] .promo-body.centered h2,
+[dir="rtl"] .promo-body.centered .eyebrow,
+[dir="rtl"] .promo-body.centered .subtext,
+[dir="rtl"] .section-head-split.centered,
+[dir="rtl"] .section-head-split.centered h2,
+[dir="rtl"] .section-head-split.centered .eyebrow,
+[dir="rtl"] .section-head-split.centered .subtext,
+[dir="rtl"] .heading-centered,
+[dir="rtl"] #contact-split h2.heading-centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+[dir="rtl"] .split-body:not(.centered) h2,
+[dir="rtl"] .artisanal-card h3 {
+  text-align: right;
+}
+
+[dir="rtl"] .artisanal-card {
+  text-align: right;
+}
+
 [dir="rtl"] .newsletter-inner.centered .subtext {
   margin-left: auto;
   margin-right: auto;

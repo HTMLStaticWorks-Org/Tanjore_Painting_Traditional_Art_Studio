@@ -1,30 +1,25 @@
-<svg width="290" height="56" viewBox="0 0 290 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tanjore Painting &amp; Traditional Art Studio">
+<svg width="280" height="52" viewBox="0 0 280 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tanjore Painting &amp; Traditional Art Studio">
   <title>Tanjore Painting &amp; Traditional Art Studio</title>
   <!-- Ornate Temple Arch & Lotus Emblem -->
   <g fill="none" stroke="#C49A36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Outer Arch -->
-    <path d="M8 46 V22 C8 12, 24 6, 24 6 C24 6, 40 12, 40 22 V46" stroke="#641C2D" stroke-width="2" />
-    <path d="M12 46 V23 C12 15, 24 10, 24 10 C24 10, 36 15, 36 23 V46" stroke="#C49A36" stroke-width="1.4" />
-    <!-- Kalash / Crown Finial -->
-    <circle cx="24" cy="4" r="1.8" fill="#C49A36" stroke="none" />
-    <!-- Lotus Motif -->
-    <path d="M24 22 C21 27, 21 33, 24 37 C27 33, 27 27, 24 22 Z" fill="rgba(196, 154, 54, 0.25)" />
-    <path d="M24 37 C19 34, 15 29, 17 24 C20 26, 22 31, 24 37 Z" fill="rgba(196, 154, 54, 0.18)" />
-    <path d="M24 37 C29 34, 33 29, 31 24 C28 26, 26 31, 24 37 Z" fill="rgba(196, 154, 54, 0.18)" />
-    <!-- Base Pedestal -->
-    <line x1="6" y1="46" x2="42" y2="46" stroke="#641C2D" stroke-width="2" />
+    <path d="M6 44 V21 C6 11, 21 6, 21 6 C21 6, 36 11, 36 21 V44" stroke="#C49A36" stroke-width="2" />
+    <path d="M10 44 V22 C10 14, 21 10, 21 10 C21 10, 32 14, 32 22 V44" stroke="#AA8434" stroke-width="1.4" />
+    <circle cx="21" cy="4" r="1.7" fill="#C49A36" stroke="none" />
+    <path d="M21 21 C18.5 25.5, 18.5 31, 21 35 C23.5 31, 23.5 25.5, 21 21 Z" fill="rgba(196, 154, 54, 0.28)" />
+    <path d="M21 35 C16.5 32.5, 13 28, 14.5 23 C17.5 25, 19.5 29.5, 21 35 Z" fill="rgba(196, 154, 54, 0.2)" />
+    <path d="M21 35 C25.5 32.5, 29 28, 27.5 23 C24.5 25, 22.5 29.5, 21 35 Z" fill="rgba(196, 154, 54, 0.2)" />
+    <line x1="4" y1="44" x2="38" y2="44" stroke="#C49A36" stroke-width="2" />
   </g>
-  <text x="52" y="29"
-        font-family="'Cormorant Garamond', Georgia, serif"
-        font-size="22"
+  <text x="46" y="27"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="16"
         font-weight="700"
-        letter-spacing="2.2"
-        fill="#641C2D">TANJORE ART STUDIO</text>
-  <text x="53" y="43"
-        font-family="'Lato', sans-serif"
-        font-size="8.5"
-        font-weight="600"
-        letter-spacing="2"
+        letter-spacing="1.1"
+        fill="#C49A36">TANJORE ART STUDIO</text>
+  <text x="47" y="40"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="7.5"
+        font-weight="700"
+        letter-spacing="1.4"
         fill="#AA8434">PAINTING &amp; TRADITIONAL ART</text>
 </svg>
-
