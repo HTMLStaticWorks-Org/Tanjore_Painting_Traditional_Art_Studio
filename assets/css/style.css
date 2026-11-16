@@ -1703,8 +1703,8 @@ body.has-announcement .page-header {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(-6px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out), color 0.3s var(--ease-out),
     background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 }
@@ -3391,14 +3391,23 @@ tr:hover {
   border-color: color-mix(in srgb, var(--band-ink) 28%, transparent);
 }
 
-.band-dark .quote-card .quote-mark {
+.band-dark .quote-card .quote-mark,
+.section-light-surface .quote-card .quote-mark {
   color: var(--band-accent);
-  opacity: 0.85;
+  opacity: 0.9;
   font-size: 1.5rem;
   line-height: 1;
   height: auto;
   overflow: visible;
   letter-spacing: 0.08em;
+}
+
+.section-light-surface .quote-card .quote-mark {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .section-light-surface .quote-card .quote-mark {
+  color: var(--color-accent-soft);
 }
 
 .band-dark .link-arrow {
@@ -3626,6 +3635,7 @@ tr:hover {
 }
 
 @media (max-width: 1024px) {
+
   .nav-links,
   .nav-actions .btn-outline,
   .nav-actions .desk-only,
@@ -4455,18 +4465,27 @@ tr:hover {
 }
 
 .promo-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: var(--space-3);
   margin-top: var(--space-5);
+  width: 100%;
+  max-width: 560px;
 }
 
 .promo-actions .btn {
-  min-width: 230px;
-  max-width: 100%;
+  width: 100%;
   justify-content: center;
   text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .promo-actions {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
 }
 
 /* Centred variant. The column stops stretching its children once align-items
@@ -5966,7 +5985,7 @@ select.form-control option {
     padding-right: var(--space-4) !important;
   }
 
-  #principles .grid-3 > *:nth-child(3) {
+  #principles .grid-3>*:nth-child(3) {
     grid-column: span 2;
     justify-self: center;
     width: 100%;
